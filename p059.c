@@ -1,5 +1,5 @@
-/* プログラミングコンテスト攻略のためのアルゴリズムとデータ構造 学習用 */
-/* p.59 */
+/* プログラミングコンテスト攻略のためのアルゴリズムとデータ構造 */
+/* p.59 3.2 挿入ソート 復習v2 */
 
 #include<stdio.h>
 
@@ -7,15 +7,15 @@
 void trace(int A[], int N) {
     int i;
     for ( i = 0; i < N; i++ ) {
-        if ( i > 0) { 
-            printf(" "); /* 隣接する要素の間に1つ空白を出力 */
+        if ( i > 0 ) {
+            printf(" ");  /* 隣接する要素の間に1つ空白を出力 */
         }
         printf("%d", A[i]);
     }
     printf("\n");
 }
 
-/* 挿入ソート(0オリジン配列 */
+/* 挿入ソート(0オリジン配列) */
 void insertionSort(int A[], int N) {
     int j, i, v;
     for ( i = 1; i < N; i++ ) {
@@ -33,14 +33,14 @@ void insertionSort(int A[], int N) {
 int main() {
     int N, i, j;
     int A[100];
-    
+
     scanf("%d", &N);
     for ( i = 0; i < N; i++ ) {
         scanf("%d", &A[i]);
     }
-    
+
     trace(A, N);
     insertionSort(A, N);
-    
+
     return 0;
 }
